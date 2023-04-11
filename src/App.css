@@ -1,38 +1,95 @@
-.App {
-  text-align: center;
+.Header{
+  background-color: black;
+  color: #fff;
+    /* font-size: 1.5rem; */
+    /* font-weight: 600; */
+    padding: 0.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    width: 100%;
+    height: 2rem;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.social-container{
+   padding:80px 50px; 
+  size: .2px;
+  
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a.social {
+  margin: 0 1rem;
+  transition: transform 250ms;
+  display: inline-block;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+a.social:hover {
+  transform: translateY(-2px);
+}
+a.youtube {
+  height: 0.5ch;
+  size: 100cm;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+a.facebook {
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a.whatsapp {
+  color: white;
+}
+
+a.instagram {
+  color:white;
+}
+a.linkdin {
+  color:white;
+}
+.home{
+  color: white;
+  text-decoration: none;
+}
+.contact{
+  text-decoration: none;
+  color: white;
+  padding-right: 10%;
+}
+.Navbar_contant{
+  background-color:#fff;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+ height: 9rem;
+  margin-top: 2rem;
+  /* padding-top: 2rem; */
+}
+.logo{
+  size: 5cm;
+  height: 5rem;
+  width: 10px;
+}
+.about{
+  color: black;
+  /* padding-right: 40%; */
+  font-size: 2rem;
+  text-decoration: none;
+}
+#button{
+  margin-right: 7%;
+  height: 34%;
+  border-radius: 500px;
+
+
+  /* padding-right: 15%; */
+}
+.con{
+  margin-top: 40%;
+  background-color: chartreuse;
+  padding-top: 10%;
 }
