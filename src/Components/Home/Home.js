@@ -1,12 +1,13 @@
 import { Typography } from '@mui/material'
 import React from 'react'
 import './Home.css'
+import Home_section3 from './Home_section3'
 
 const Home = () => {
   return (
     <div>
-        
-      <Typography className='ho' variant='h1'>home</Typography>
+        <Home_section3></Home_section3>
+      
     </div>
   )
 }
