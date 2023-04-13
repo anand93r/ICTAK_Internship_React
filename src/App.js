@@ -3,6 +3,7 @@ import './App.css';
 import Header from './Components/Header';
 import Home from './Components/Home/Home';
 import Contact from './Components/Contact';
+import Footer from './Components/Footer';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path='/contact' element={<Contact/>}></Route>
       
       </Routes>
+      <Footer/>
     </div>
   );
 }
