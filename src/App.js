@@ -4,6 +4,7 @@ import Header from './Components/Header';
 import Home from './Components/Home/Home';
 import Contact from './Components/Contact';
 import Footer from './Components/Footer';
+import ScrollUpArrow from './Components/ScrollUpArrow';
 
 function App() {
   return (
@@ -12,8 +13,9 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>}></Route>
         <Route path='/contact' element={<Contact/>}></Route>
-      
+     
       </Routes>
+      <ScrollUpArrow></ScrollUpArrow>
       <Footer/>
     </div>
   );
