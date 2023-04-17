@@ -1,7 +1,89 @@
-.ho{
+
+  .body{
+    height: 60rem;
+    width: 100%;
+  }
+  #sec3_body{
+    padding-top: 12%;
+    padding-left: 6%;
+  }
+  #sec3_head{
+    margin-top: 10%;
+    padding-top: 13%;
+    text-align: center;
+  }
+  .sec3_conn{
+    display: block;
+    padding-top: 5%;
+   
+  }
+  #reg{
+    font-size: 17px;
+    cursor: pointer;
+    font-family: "Arvo";
+    letter-spacing: .05rem;
+    margin-top: 10%;
+    margin-left: 20%;
     
-    margin-top: 5%;
-    padding-top: 10%;
-    background-color: brown;
+    border-radius: 200px;
+     background-color: coral; 
+    color: white;
+    height: 80px;
+    width: 250px;
+  }
+  .my-button:hover {
+    background-color: rgb(228, 6, 6) !important;
+    color: #0d0c0c !important;
+  }
+  #imgg{
+  
+    transform: skewY(-6deg);
+    
+    padding-left: 0%;
+    margin-left: 20%;
+    border-radius: 1px;
+      box-shadow: #0000008f 0 22px 70px 4px!important;
+      height: 500px;
+      display: block;
+      
+      width: 500px;
+     
+  }
+  .img1{ 
+    
+    height: 500px;
+    width: 500px;
+  }
+  .Home-Builder-Carrier-container {
+    /* margin: 10%; */
+    margin-left: 12%;
+    margin-right: 15%;
   }
   
+  .Home-builder-carrier-content {
+    width: 50%;
+    text-align: justify;
+  }
+  
+  .Home-builder-carrier-title {
+    font-size: 50px;
+    font-weight: 500;
+    color: #212121;
+  }
+  
+  .Home-builder-carrier-text p {
+    --tw-text-opacity: 1;
+    color: rgba(100, 116, 139, var(--tw-text-opacity));
+    font-size: 1.125rem;
+  }
+  .Home-builder-button{
+    margin:2%;
+  }
+  #Home-builder-carrier-button{
+    margin-right: 7%;
+    height: 34%;
+    border-radius: 500px;
+  }
+  .Home-Builder-Carrier-container{
+    background-image: url("https://ictkerala.org/GRA_Home-Header-Background.77f105b5edb5afc6.png");
+  }

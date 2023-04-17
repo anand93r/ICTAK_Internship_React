@@ -1,15 +1,15 @@
 import { Button, Typography } from '@mui/material'
 import React from 'react'
 
-import cropped from './Images/cropped-ict-ico.png'
+// import cropped from './Images/cropped-ict-ico.png'
 import { Link } from 'react-router-dom'
 
 const NavBar = () => {
   return (
     <div className='Navbar_contant'>
       <div className='logo'>
-       
-        <img src={cropped} alt=''/>
+      <img src='https://ictkerala.org/assets/images/LOGO_ICTAK-Name.svg' className='logo'></img>
+        {/* <img src={cropped} alt=''/> */}
         
         
       </div>
