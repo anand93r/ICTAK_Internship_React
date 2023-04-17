@@ -4,6 +4,8 @@ import Header from './Components/Header';
 import Home from './Components/Home/Home';
 import Contact from './Components/Contact';
 import Footer from './Components/Footer';
+import CurrentCourses from './Components/Home/CurrentCourses';
+import Statbox from './Components/Home/Statbox';
 import ScrollUpArrow from './Components/ScrollUpArrow';
 
 function App() {
@@ -15,6 +17,8 @@ function App() {
         <Route path='/contact' element={<Contact/>}></Route>
      
       </Routes>
+      <Statbox/>
+      <CurrentCourses/>
       <ScrollUpArrow></ScrollUpArrow>
       <Footer/>
     </div>
