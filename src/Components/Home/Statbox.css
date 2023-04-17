@@ -1,0 +1,41 @@
+
+
+
+.statpage{
+    background-color: #3aafa9;
+    border-radius: 5px;
+    margin: 8rem 0 0 0;
+    
+    
+color: #eef5ed;
+
+}
+
+.main-box{
+    display: flex;
+    
+    align-items: center;
+    justify-content: space-between; 
+    padding: 4rem 4rem;
+     
+    
+}
+
+.sub-content{
+    padding-top: 1.5rem;
+    font-weight: bold !important;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 1.5rem 2rem 0rem 2rem;
+    
+}
+
+.mini-content{
+    font-weight: bold !important;
+    font-size: 2rem !important;
+    padding-top: 1rem;
+}
+
+.MuiContainer-root{
+    padding: 0 !important;
+}
