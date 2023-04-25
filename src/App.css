@@ -154,3 +154,204 @@ svg {
   height: 30px;
   fill: #fff;
 }
+
+
+/* single course page */
+.accordion {
+  background-color: #eee;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  transition: 0.4s;
+  font-size: 18px;
+  line-height: 34px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  display: block;
+  margin: 0;
+  cursor: pointer;
+  color: #6c6c6a;
+}
+
+.active,
+.accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.course-date .course-page-title-date {
+  text-align: left;
+  font-family: "Arvo", sans-serif;
+  background-color: #dc3545;
+  display: inline-block;
+  padding: 0.35em 0.65em;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
+  font-size: 15px;
+
+}
+
+.img-fluid {
+  margin-top: 8%;
+  width: 100%;
+  height: auto;
+}
+
+.course-date .course-page-title {
+  text-align: justify;
+  font-family: "Arvo", sans-serif;
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 55px;
+  color: #333;
+  margin-top: 2%;
+}
+
+.row {
+  margin-top: 5% !important;
+  margin-left: 5% !important;
+  margin-right: 5% !important;
+}
+
+.course-date,
+.course-detail-overview-heading h5 {
+  text-align: left;
+}
+
+.course-detail-overview-heading h5 {
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #3d3b3b;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  margin-top: 5% !important;
+}
+
+.course-detail-overview p {
+  text-align: left;
+  color: #888;
+}
+
+.course-detail-overview-venue {
+  font-weight: bolder;
+}
+
+.col-md-4 {
+  border: 1px solid #dee2e6 !important;
+}
+
+.course-additional-details {
+  margin-top: 5% !important;
+  margin-bottom: 5% !important;
+  padding: 10%;
+}
+
+.course-detail-fee,
+.course-includes {
+  margin-top: 15% !important;
+
+}
+
+.course-detail-fee .course-fee {
+  font-family: "Asap", sans-serif;
+  font-weight: bolder;
+  font-size: 5px;
+  min-height: 55px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #08a;
+  border: #0088aa 1px solid;
+  margin: 17px !important;
+  padding: 5px !important;
+}
+
+#course-reg-button {
+  height: 55px;
+  width: 190px;
+  font-size: 15px;
+  cursor: pointer;
+  font-family: "Arvo";
+  letter-spacing: .05rem;
+  border-radius: 200px;
+  background-color: coral;
+  color: white;
+
+}
+
+.course-register-button:hover {
+  background-color: rgb(228, 6, 6) !important;
+  color: #ffff !important;
+}
+
+.course-detail-fee .course-includes {
+  font-weight: 700;
+  color: #514e4e;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  text-align: left;
+  margin-left: 5px;
+}
+
+.course-includes-detail-points p {
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  color: #6c6c6a;
+  text-align: left;
+  margin: 5px;
+}
+
+.course-note-section {
+  background: #EEE;
+  border-radius: 5px;
+  border: thin solid #DDD;
+  margin: 10px;
+}
+
+.course-note-section-heading {
+  padding: 10px;
+  font-weight: bold;
+  background: white;
+  border-radius: 5px 5px 0 0;
+  font-size: 100%;
+}
+
+.course-note-section-heading p {
+  text-align: left;
+}
+
+.course-note-section-points p {
+  padding: 10px;
+  text-align: left;
+}
+
+.course-additional-details li {
+  text-align: left;
+}
