@@ -7,11 +7,13 @@ import Footer from './Components/Footer';
 import CurrentCourses from './Components/Home/CurrentCourses';
 import Statbox from './Components/Home/Statbox';
 import ScrollUpArrow from './Components/ScrollUpArrow';
+import SingleCoursePage from './Components/SingleCoursePage';
 
 function App() {
   return (
     <div className="App">
        <Header/>
+       {/* <SingleCoursePage></SingleCoursePage> */}
       <Routes>
         <Route path='/' element={<Home/>}></Route>
         <Route path='/contact' element={<Contact/>}></Route>
