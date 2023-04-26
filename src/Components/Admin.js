@@ -2,7 +2,7 @@ import { Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRo
 import React,{useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import {db} from '../firebase-config'
-import {collection, getDocs} from 'firebase/firestore'
+import {collection, getDocs, deleteDoc, doc} from 'firebase/firestore'
 
 
 
@@ -18,29 +18,33 @@ const Admin = () => {
 
     useEffect(() => {  
   
-        const getCourses = async () => {                   // view api
+     getCourses();
+        console.log("courses",courses);
+      }, [])
+
+
+      const getCourses = async () => {                   // view api
         const data = await getDocs(coursesCollectionRef);
           //we put the ref and pull the correct collection
           
         setCourses(data.docs.map((doc)=>({...doc.data(), id: doc.id})))  //sending data to store in users???
         };
-    
+
+      const deleteCourse = async (id) => { 
+        console.log("id",id)     // delete api
+        const courseDoc = doc(db,"courses", id)
+        await deleteDoc(courseDoc);
         getCourses();
-      }, [courses])
+
       
+        
+      }
 
- 
-
-
-
-
-
-
-
+  
   return (
     <div>
       <h1 className='heading' >Admin Dashboard</h1>
-      <Link to="/admin/dashboard/addedit" ><Button  >Add Courses</Button></Link>
+      <Link to="/admin/dashboard/addedit"  state={{ value: null, isEdit: false }} ><Button  >Add Courses</Button></Link>
       
       <TableContainer  >
         <Table>
@@ -70,8 +74,8 @@ const Admin = () => {
                    <TableCell>{course.cDuration}</TableCell>
                    <TableCell>{course.cFee}</TableCell>
                    <TableCell>{course.overview}</TableCell>
-                   <TableCell><Button>Edit</Button></TableCell>
-                   <TableCell><Button>Delete</Button></TableCell>
+                   <TableCell><Link to="/admin/dashboard/addedit" state = {{value:course ,isEdit:true}} ><Button  >Edit</Button></Link></TableCell>
+                   <TableCell><Button onClick={()=> deleteCourse(course.id)}>Delete</Button></TableCell>
                </TableRow> )
                 }) }
             </TableBody>
