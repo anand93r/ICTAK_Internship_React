@@ -4,9 +4,10 @@ import Header from './Components/Header';
 import Home from './Components/Home/Home';
 import Contact from './Components/Contact';
 import Footer from './Components/Footer';
-import CurrentCourses from './Components/Home/CurrentCourses';
-import Statbox from './Components/Home/Statbox';
+
 import ScrollUpArrow from './Components/ScrollUpArrow';
+import Admin from './Components/Admin';
+import AddEdit from './Components/AddEdit';
 import SingleCoursePage from './Components/SingleCoursePage';
 
 function App() {
@@ -17,10 +18,12 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>}></Route>
         <Route path='/contact' element={<Contact/>}></Route>
+      
+        <Route path='/admin/dashboard' element={<Admin/>}></Route>
+        <Route path='/admin/dashboard/addedit' element={<AddEdit/>}></Route>
      
       </Routes>
-      <Statbox/>
-      <CurrentCourses/>
+     
       <ScrollUpArrow></ScrollUpArrow>
       <Footer/>
     </div>

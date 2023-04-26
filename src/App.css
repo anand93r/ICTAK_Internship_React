@@ -155,6 +155,9 @@ svg {
   fill: #fff;
 }
 
+.datatable {
+margin-bottom: 10rem;
+}
 
 /* single course page */
 .accordion {
