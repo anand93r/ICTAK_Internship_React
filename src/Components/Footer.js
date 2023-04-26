@@ -12,23 +12,7 @@ import Typography from '@mui/material/Typography';
 const Footer = () => {
   return (
     <>
-    <Card sx={{ minWidth: 375 }} className='Subscribe'>
-      <CardContent>
-        <Typography variant='h5' gutterBottom>
-        Let's keep in touch
-        </Typography>
-        <Typography variant="h6" component="div">
-        Subscribe to keep up with fresh news and exciting updates. We promise not to spam you!
-        </Typography>
-        <TextField id="outlined-basic" label="Email" variant="outlined" />
-    <Button variant="contained" href="#contained-buttons">
-    Subscribe
-    </Button>
-      </CardContent>
-      
-    </Card>
-    
-    <div className='Footer' >
+        <div className='Footer' >
       
       
         
