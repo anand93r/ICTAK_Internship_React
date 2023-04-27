@@ -17,8 +17,8 @@ function App() {
         <Route path='/contact' element={<Contact/>}></Route>
      
       </Routes>
-      <Statbox/>
-      <CurrentCourses/>
+      
+      
       <ScrollUpArrow></ScrollUpArrow>
       <Footer/>
     </div>
