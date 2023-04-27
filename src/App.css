@@ -104,9 +104,10 @@ a.linkdin {
 }
 
 .con {
-  margin-top: 40%;
-  background-color: chartreuse;
-  padding-top: 10%;
+  margin-top: 10%;
+  background-color: rgb(246, 248, 244);
+  padding-top: 5%;
+  text-align: center;
 }
 
 .Subscribe {
