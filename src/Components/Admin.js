@@ -27,7 +27,7 @@ const Admin = () => {
         const data = await getDocs(coursesCollectionRef);
           //we put the ref and pull the correct collection
           
-        setCourses(data.docs.map((doc)=>({...doc.data(), id: doc.id})))  //sending data to store in users???
+        setCourses(data.docs.map((doc)=>({...doc.data(), id: doc.id})))  //sending data to store in courses???
         };
 
       const deleteCourse = async (id) => { 
@@ -53,6 +53,7 @@ const Admin = () => {
                 
                 <TableRow>
                     <TableCell>Title</TableCell>
+                    <TableCell>Open</TableCell>
                     <TableCell>Image</TableCell>
                     <TableCell>Registration start</TableCell>
                     <TableCell>Registration end</TableCell>
@@ -68,6 +69,7 @@ const Admin = () => {
                    return  ( 
                    <TableRow>
                    <TableCell>{course.title}</TableCell>
+                   <TableCell>{course.open}</TableCell>
                    <TableCell>{course.image}</TableCell>
                    <TableCell>{course.regStart}</TableCell>
                    <TableCell>{course.regEnd}</TableCell>

@@ -2,7 +2,12 @@ import React from 'react'
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import { Button, Container, Typography } from '@mui/material';
+import { useLocation } from 'react-router-dom';
 const SingleCoursePage = () => {
+
+  const location = useLocation();
+  const {course} = location.state
+
     return (
         <div>
             <Container>
@@ -10,24 +15,20 @@ const SingleCoursePage = () => {
                     <div className='col-md-8'>
                         <div className='course-date'>
                             <Typography variant='h6' className="course-page-title-date">
-                                Starts on 2023 April 03
+                                Starts on {course.regStart}
                             </Typography>
                             <Typography variant='h4' className="course-page-title">
-                                Certificate Course in Health Information Technology
+                                {course.title}
                             </Typography>
                         </div>
-                        <img src="https://drive.google.com/uc?id=1dKt_GBHJzWxmAhmCeXpdHZBwjkXlguzV" alt="Your Image" className="img-fluid" />
+                        <img src={course.image} alt="Your Image" className="img-fluid" />
                         <div className='course-detail-overview-heading'>
                             <Typography variant='h5'>
                                 Overview
                             </Typography>
                         </div>
                         <div className='course-detail-overview'>
-                            <p>
-                                Certificate course in Health Information Technology is a specialized certificate course in information technology for those with a background in computer engineering, information technology, electronics, or biomedical engineering. The core subjects of this course are foundations in hospital management, medical informatics, and hospital information systems. There is currently a severe shortage of qualified and trained labor in various fields of medical technology.
-                            </p>   <p>
-                                The industry is experiencing a significant deficit of healthcare workers to operate and maintain advanced equipment in health informatics and health information systems. This course aims to create industry-ready labor that caters to the above-said demands.
-                            </p>
+                         {course.overview}
                             <p>
                                 Course Venue:<span className='course-detail-overview-venue' >Malabar Cancer Centre, Moozhikkara (P.O), Thalassery, Kannur</span>
                             </p>
@@ -37,7 +38,7 @@ const SingleCoursePage = () => {
                         <div className='course-detail-fee'>
                             <div className='course-fee'>
                                 <h3>
-                                    30000 INR + 18% GST
+                                   {course.cFee} INR + 18% GST
                                 </h3>
                             </div>
 
@@ -54,7 +55,7 @@ const SingleCoursePage = () => {
                                 </Typography>
                             </div>
                             <div className='course-includes-detail-points'>
-                                <p>6 Months (1050 Hrs.) of classes</p>
+                                <p>{course.cDuration} of classes</p>
                                 <p>150 Hrs. of theory</p>
                                 <p>6 Months internship (with stipend)</p>
                             </div>
@@ -63,8 +64,9 @@ const SingleCoursePage = () => {
                                     <p>Please Note</p>
                                 </div>
                                 <div div className="course-note-section-points">
-                                    <p>Registration starts on Feb 22</p>
-                                    <p>Registration ends on Mar 22</p>
+                                    <p>{course.open === "true" ?  <span style={{fontWeight: 'bold', color: 'green'}} >Currently Available</span> :  <span style={{fontWeight: 'bold', color: 'red'}}>Not Available</span>}</p>
+                                    <p>Registration starts on {course.regStart}</p>
+                                    <p>Registration ends on {course.regEnd}</p>
                                     <p>Early bird offer till Mar 10</p>
                                     <p>Batch size ~15 Nos.</p>
                                 </div>

@@ -9,15 +9,18 @@ import ScrollUpArrow from './Components/ScrollUpArrow';
 import Admin from './Components/Admin';
 import AddEdit from './Components/AddEdit';
 import SingleCoursePage from './Components/SingleCoursePage';
+import Courses from './Components/Home/Courses';
 
 function App() {
   return (
     <div className="App">
        <Header/>
-       {/* <SingleCoursePage></SingleCoursePage> */}
+    
       <Routes>
         <Route path='/' element={<Home/>}></Route>
         <Route path='/contact' element={<Contact/>}></Route>
+        <Route path='/courses' element={<Courses/>}></Route>
+        <Route path='/courses/details' element={<SingleCoursePage/>}></Route>
       
         <Route path='/admin/dashboard' element={<Admin/>}></Route>
         <Route path='/admin/dashboard/addedit' element={<AddEdit/>}></Route>
