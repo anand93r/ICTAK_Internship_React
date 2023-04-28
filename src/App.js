@@ -10,6 +10,8 @@ import Admin from './Components/Admin';
 import AddEdit from './Components/AddEdit';
 import SingleCoursePage from './Components/SingleCoursePage';
 import Courses from './Components/Home/Courses';
+import SignUp from './Components/SignUp';
+import Login from './Components/Login';
 
 function App() {
   return (
@@ -24,7 +26,9 @@ function App() {
       
         <Route path='/admin/dashboard' element={<Admin/>}></Route>
         <Route path='/admin/dashboard/addedit' element={<AddEdit/>}></Route>
-     
+        <Route path='/signup' element = {<SignUp/>}></Route>
+        <Route path='/login' element = {<Login/>}></Route>
+       
       </Routes>
      
       <ScrollUpArrow></ScrollUpArrow>
