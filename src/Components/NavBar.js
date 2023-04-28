@@ -14,7 +14,7 @@ const NavBar = () => {
         
       </div>
       <Link to='/about' className='about'>About</Link>
-      <Button variant="contained" id='button'>Courses</Button>
+      <Link to='/courses'> <Button variant="contained" id='button'>Courses</Button></Link>
       
      
     </div>

@@ -1,5 +1,5 @@
 import { Container, Typography } from "@mui/material";
-import React from "react";
+import React, { useState,useEffect } from "react";
 import techimg from "../Images/techimage.webp"
 import "./CurrentCourses.css"
 import health from '../Images/health.jpg'
@@ -10,12 +10,36 @@ import Rprogram from "../Images/R.png"
 import Reactcourse from "../Images/react.png"
 import Seocourse from "../Images/seo.png"
 import Robotic from "../Images/robotic.png"
+import {db} from '../../firebase-config'
+import {collection, getDocs, deleteDoc, doc} from 'firebase/firestore'
+import { Link } from "react-router-dom";
 
 
 
 
 
 const CurrentCourses = () => {
+
+const [courses,setCourses] = useState([]);
+const coursesCollectionRef = collection(db,"courses")
+
+
+useEffect(() => {  
+  
+  getCourses();
+     console.log("courses",courses);
+   }, [])
+
+
+   const getCourses = async () => {                   // view api
+     const data = await getDocs(coursesCollectionRef);
+       //we put the ref and pull the correct collection
+       
+     setCourses(data.docs.map((doc)=>({...doc.data(), id: doc.id})))  //sending data to store in courses???
+     };
+
+
+
   return (
    <Container >
       <div className="Currentbox">
@@ -28,40 +52,17 @@ const CurrentCourses = () => {
         <br/>
 
         <div className="mainbox">
-            <div className="minibox">
+          {courses.map((course)=>{
+            return( <Link to="/courses/details" state={{course}}><div className="minibox" id={course.open === "true" ? "show" : "hide"}>
               
             <img src={health} className="imagecontainer" alt="tech image"/>
               <Typography className="content">Certificate Course in Health Information Technology</Typography>
                
-            </div>
-            <div className="minibox">
-            <img src={python} className="imagecontainer" alt="tech image"/>
-              <Typography className="content">Python Programming</Typography>  
-            </div>
-            <div className="minibox">
-            <img src={Seocourse} className="imagecontainer" alt="tech image"/>
-              <Typography className="content">Social Media Marketing and SEO</Typography>  
-            </div>
-            <div className="minibox">
-            <img src={Reactcourse} className="imagecontainer" alt="tech image"/>
-              <Typography className="content">Front-end Application Development with React</Typography>  
-            </div>
-            <div className="minibox">
-            <img src={Robotic} className="imagecontainer" alt="tech image"/>
-              <Typography className="content">Robotic Process Automation with UiPath</Typography>  
-            </div>
-            <div className="minibox">
-            <img src={Ethical} className="imagecontainer" alt="tech image"/>
-              <Typography className="content">Ethical Hacking</Typography>  
-            </div>
-            <div className="minibox">
-            <img src={PowerBI} className="imagecontainer" alt="tech image"/>
-              <Typography className="content">Business Intelligence with Power BI</Typography>  
-            </div>
-            <div className="minibox">
-            <img src={Rprogram} className="imagecontainer" alt="tech image"/>
-              <Typography className="content">Data Analytics With R</Typography>  
-            </div>
+            </div></Link>)
+            
+          })}
+           
+            
            
 
         </div>
