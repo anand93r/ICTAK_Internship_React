@@ -1,0 +1,35 @@
+.add{
+    background-color:rgba(59, 130, 246, .5);
+}
+
+
+
+.input{
+     padding:5px 10px  ; 
+    margin-top: 4%;
+    margin-left: .5%;
+    
+}
+
+.label{ 
+    padding-right: .5%;
+    margin-left: 2%;
+    display: inline-block;
+    text-align: right;
+    font-size: large;
+    
+}
+.button{
+    width: 10%;
+    height: 40%;
+    border-radius: 500px;
+    background-color: chocolate;
+    color: white;
+    margin-bottom: 5%;
+    margin-top: 4%;
+    
+}
+#back{
+    align-items: right;
+    text-align: right;
+}

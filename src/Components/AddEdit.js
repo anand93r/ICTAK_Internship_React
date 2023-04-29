@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+
 import {
   collection,
   addDoc,
@@ -9,6 +10,7 @@ import {
 import { db, storage } from "../firebase-config";
 import { Button } from "@mui/material";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import './AddEdit.css';
 import uploadImage from "./Images/upload.png";
 
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
@@ -137,24 +139,21 @@ const AddEdit = () => {
   }, [newCourse]);
 
   return (
-    <div>
-      <Link to="/admin/dashboard">
-        <Button>Back</Button>
+    
+     <div className="add">
+     <Link to="/admin/dashboard">
+        <Button id="back">Back</Button>
       </Link>
       <h1>{isEdit ? "Edit Courses" : "Add Courses"}</h1>
-      <input
-        onChange={(e) => {
-          setImageFile(e.target.files[0]);
-        }}
-        name="image"
-        type="file"
-        style={{ width: "500px" }}
-      />
+      
+      <div className="container">
+     
+      
       <form
         onSubmit={(event) => {
           isEdit ? editCourse(event, course) : addCourse(event);
         }}
-      >
+      ><label className="label" >Title:-</label>
         <input
           onChange={(e) => {
             handleChange(e);
@@ -162,16 +161,33 @@ const AddEdit = () => {
           value={course.title}
           name="title"
           type="text"
-          placeholder="title"
+          placeholder="Title"
           style={{ width: "500px" }}
-        />
-        <label for="open">Currently Available:</label>
+          className="input"
+        /><br/>
 
-        <select name="open" id="open">
+<label for='myfile' className="label">Choose Image:-</label>
+
+<input
+  onChange={(e) => {
+    setImageFile(e.target.files[0]);
+  }}
+  name="image"
+   type="file"
+   id="myfile"
+  style={{ width: "500px" }}
+  className="input"
+/>
+
+        <label for="open" className="label">Currently Available:-</label>
+
+        <select name="open"  className="input">
+        
           <option value="true">Yes</option>
           <option value="false">No</option>
           
-        </select>
+        </select><br/>
+        
 
         <input
           onChange={(e) => {
@@ -181,6 +197,7 @@ const AddEdit = () => {
           name="regStart"
           type="text"
           placeholder="Registration Start"
+          className="input"
         />
         <input
           onChange={(e) => {
@@ -190,6 +207,7 @@ const AddEdit = () => {
           name="regEnd"
           type="text"
           placeholder="Registration End"
+          className="input"
         />
         <input
           onChange={(e) => {
@@ -199,6 +217,7 @@ const AddEdit = () => {
           name="cDuration"
           type="text"
           placeholder="Course Duration"
+          className="input"
         />
         <input
           onChange={(e) => {
@@ -208,6 +227,7 @@ const AddEdit = () => {
           name="cFee"
           type="text"
           placeholder="Course fee"
+          className="input"
         />
         <input
           onChange={(e) => {
@@ -217,9 +237,12 @@ const AddEdit = () => {
           name="overview"
           type="text"
           placeholder="Overview"
-        />
-        <button type="submit">Submit</button>
+          className="input"
+        /><br/>
+        <br/>
+        <button type="submit" className="button">Submit</button>
       </form>
+      </div>
     </div>
   );
 };

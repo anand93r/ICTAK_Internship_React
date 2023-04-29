@@ -26,7 +26,7 @@ function App() {
       
         <Route path='/admin/dashboard' element={<Admin/>}></Route>
         <Route path='/admin/dashboard/addedit' element={<AddEdit/>}></Route>
-        <Route path='/signup' element = {<SignUp/>}></Route>
+        <Route path='/admin/signup' element = {<SignUp/>}></Route>
         <Route path='/login' element = {<Login/>}></Route>
        
       </Routes>
