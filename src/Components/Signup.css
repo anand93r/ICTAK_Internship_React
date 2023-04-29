@@ -1,6 +1,7 @@
 .sign{
     padding-top: 10%;
-    background-color: gray;
+    background-color:rgba(59, 130, 246, .5);
+    
     /* background-color: cadetblue; */
 }
 .box{
@@ -15,7 +16,7 @@
     width: 35%;
     border: 1px solid;
   padding: 10px;
-  box-shadow: 5px 10px 20px 15px black inset;
+  box-shadow: 5px 10px 20px 15px #3a47af inset;
     /* border-color: rgb(15, 14, 14); */
     /* border-style: dotted; */
     background-color: rgb(248, 246, 243);
