@@ -55,7 +55,7 @@ useEffect(() => {
             
             <Link to="/courses/details" state={{course}} ><div id={course.open === "true" ? "open" : "close"} className="minibox">
               
-            <img src={health} className="imagecontainer" alt="tech image"/>
+            <img src={course.image} className="imagecontainer" alt="tech image"/>
               <Typography className="content">{course.title}</Typography>
                
             </div></Link>)

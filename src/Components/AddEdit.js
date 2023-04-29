@@ -60,7 +60,7 @@ const AddEdit = () => {
   const uploadImage = () => {
     const name = new Date().getTime() + imageFile.name;
 
-    const storageRef = ref(storage, imageFile.name);
+    const storageRef = ref(storage, name);
     const uploadTask = uploadBytesResumable(storageRef, imageFile);
 
     // Listen for state changes, errors, and completion of the upload.
@@ -88,14 +88,14 @@ const AddEdit = () => {
         getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
           console.log("downloadURL", downloadURL);
           // setNewCourse((prev)=>({...prev, image:downloadURL}))
-          setDownloadUrl(downloadURL);
+          setDownloadUrl(downloadURL);    // send downloadurl to usestate
         });
       }
     );
   };
 
   useEffect(() => {
-    imageFile && uploadImage();
+    imageFile && uploadImage();   //condition to prevent uploading empty data
   }, [imageFile]);
 
   const coursesCollectionRef = collection(db, "courses"); // to specify the file
@@ -112,9 +112,9 @@ const AddEdit = () => {
     console.log(event);
     const data = new FormData(event.target);
     console.log("data", data);
-    const course = Object.fromEntries(data.entries());
+    const course = Object.fromEntries(data.entries());   //convert to object
     console.log("course", course);
-    course.image = downloadUrl;
+    course.image = downloadUrl;      //adding downloadurl to course
     setNewCourse([course]);
   };
 
@@ -125,14 +125,14 @@ const AddEdit = () => {
   };
 
   const editCourse = (event, course) => {
-    event.preventDefault();
-    course.image = downloadUrl; // to prevent the null error because of refresh
+    event.preventDefault();    // to prevent the null error because of refresh
+    course.image = downloadUrl;       //adding downloadurl to course
     updateCourse(course.id, course);
     navigate("/admin/dashboard");
   };
 
   useEffect(() => {
-    if (newCourse != []) {
+    if (newCourse != []) {                 // after running addcourse() because empty array goes in
       createCourse();
       console.log("new", newCourse);
     }
