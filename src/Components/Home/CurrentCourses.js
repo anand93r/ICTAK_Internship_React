@@ -21,12 +21,15 @@ import { Link } from "react-router-dom";
 const CurrentCourses = () => {
 
 const [courses,setCourses] = useState([]);
+
+
 const coursesCollectionRef = collection(db,"courses")
 
 
 useEffect(() => {  
   
   getCourses();
+  
      console.log("courses",courses);
    }, [])
 
@@ -38,6 +41,7 @@ useEffect(() => {
      setCourses(data.docs.map((doc)=>({...doc.data(), id: doc.id})))  //sending data to store in courses???
      };
 
+ 
 
 
   return (
@@ -53,6 +57,7 @@ useEffect(() => {
 
         <div className="mainbox">
           {courses.map((course)=>{
+          
             return( <Link to="/courses/details" state={{course}}><div className="minibox" id={course.open === "true" ? "show" : "hide"}>
               
             <img src={course.image} className="imagecontainer" alt="tech image"/>
