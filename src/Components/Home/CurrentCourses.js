@@ -55,8 +55,8 @@ useEffect(() => {
           {courses.map((course)=>{
             return( <Link to="/courses/details" state={{course}}><div className="minibox" id={course.open === "true" ? "show" : "hide"}>
               
-            <img src={health} className="imagecontainer" alt="tech image"/>
-              <Typography className="content">Certificate Course in Health Information Technology</Typography>
+            <img src={course.image} className="imagecontainer" alt="tech image"/>
+              <Typography className="content">{course.title}</Typography>
                
             </div></Link>)
             
