@@ -360,6 +360,9 @@ margin-bottom: 10rem;
 .course-additional-details li {
   text-align: left;
 }
+.course-detail-overview{
+  text-align: left;
+}
 
 /* About page styles */
 .About-us-first-section-img img,
