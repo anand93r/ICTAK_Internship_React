@@ -12,6 +12,7 @@ import SingleCoursePage from './Components/SingleCoursePage';
 import Courses from './Components/Home/Courses';
 import SignUp from './Components/SignUp';
 import Login from './Components/Login';
+import About from './Components/About';
 
 function App() {
   return (
@@ -28,7 +29,7 @@ function App() {
         <Route path='/admin/dashboard/addedit' element={<AddEdit/>}></Route>
         <Route path='/signup' element = {<SignUp/>}></Route>
         <Route path='/admin' element = {<Login/>}></Route>
-       
+        <Route path='/about' element={<About/>}></Route>
       </Routes>
      
       <ScrollUpArrow></ScrollUpArrow>
