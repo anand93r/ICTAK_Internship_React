@@ -88,7 +88,7 @@ a.linkdin {
 .about {
   color: black;
   /* padding-right: 40%; */
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-decoration: none;
 }
 
@@ -359,4 +359,81 @@ margin-bottom: 10rem;
 
 .course-additional-details li {
   text-align: left;
+}
+/* About page styles */
+.About-us-first-section-img img,
+.About-us-second-section-img img,
+.About-us-fourth-section-img img {
+  object-fit: cover;
+  border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.About-us-third-section-img img {
+  object-fit: cover;
+  border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+  width: 80%;
+}
+
+.About-us-first-section-heading .About-us-first-section-title {
+  letter-spacing: 2px;
+  font-weight: 600;
+  text-align: left;
+  font-size: 45px;
+}
+
+.About-us-second-section-heading .About-us-second-section-title,
+.About-us-third-section-heading .About-us-third-section-title,
+.About-us-fourth-section-heading .About-us-fourth-section-title {
+  letter-spacing: 2px;
+  font-weight: 600;
+  text-align: left;
+  font-size: 35px;
+}
+
+.About-us-first-section-paragraph p,
+.About-us-second-section-paragraph p,
+.About-us-third-section-paragraph p,
+.About-us-fourth-section-paragraph p {
+  line-height: 1.625;
+  font-size: 17px;
+  font-weight: 300;
+  margin-bottom: 1.5rem !important;
+  margin-top: 1.5rem !important;
+  text-align: left;
+  color: darkgray;
+}
+
+.About-us-fourth-section-heading,
+.About-us-fourth-section-text,
+.About-us-commitee {
+  padding-top: 5%;
+}
+
+.About-us-commitee-heading .About-us-commitee-title {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.About-us-commitee-details {
+  padding-bottom: 50px;
+}
+
+.About-us-commitee-details p,
+.About-us-commitee-details-list {
+  color: black;
+  text-align: left;
+  padding-top: 3%;
+}
+
+.About-us-commitee-details-list li {
+  text-align: left;
+}
+.About-us-section .col-md-4{
+  border:none !important;
 }

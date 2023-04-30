@@ -12,7 +12,7 @@ import SingleCoursePage from './Components/SingleCoursePage';
 import Courses from './Components/Home/Courses';
 import SignUp from './Components/SignUp';
 import Login from './Components/Login';
-
+import About from './Components/About';
 function App() {
   return (
     <div className="App">
@@ -23,12 +23,11 @@ function App() {
         <Route path='/contact' element={<Contact/>}></Route>
         <Route path='/courses' element={<Courses/>}></Route>
         <Route path='/courses/details' element={<SingleCoursePage/>}></Route>
-      
+        <Route path='/about' element={<About/>}></Route>
         <Route path='/admin/dashboard' element={<Admin/>}></Route>
         <Route path='/admin/dashboard/addedit' element={<AddEdit/>}></Route>
         <Route path='/admin/signup' element = {<SignUp/>}></Route>
         <Route path='/login' element = {<Login/>}></Route>
-       
       </Routes>
      
       <ScrollUpArrow></ScrollUpArrow>
